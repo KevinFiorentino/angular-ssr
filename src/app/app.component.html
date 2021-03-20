@@ -1,17 +1,32 @@
-<main>
+<main class="app-main">
   
-  <mat-toolbar>
-      <span><strong>Pink Floyd</strong></span>
-      <button fxHide fxHide.sm="false" fxHide.xs="false" mat-icon-button aria-label="Ícono de menú">
-          <mat-icon>menu</mat-icon>
-      </button>
-      <div fxHide.lg="false" fxHide.md="false" fxHide.sm="true" fxHide.xs="true">
-          <a routerLink="/pulse" mat-button routerLinkActive="active">Pulse</a>
-          <a routerLink="/the-wall" mat-button routerLinkActive="active">The Wall</a>
-          <a routerLink="/the-dark-side-of-the-moon" mat-button routerLinkActive="active">The Dark Side</a>
-      </div>
-  </mat-toolbar>
+    <mat-toolbar>
+        <span class="logotipo"><strong>Pink Floyd</strong></span>
+        <button (click)="sidenav.toggle()" fxHide fxHide.sm="false" fxHide.xs="false" mat-icon-button aria-label="Ícono de menú">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div fxHide.lg="false" fxHide.md="false" fxHide.sm="true" fxHide.xs="true">
+            <a routerLink="/pulse" mat-button routerLinkActive="active">Pulse</a>
+            <a routerLink="/the-wall" mat-button routerLinkActive="active">The Wall</a>
+            <a routerLink="/the-dark-side-of-the-moon" mat-button routerLinkActive="active">The Dark Side</a>
+        </div>
+    </mat-toolbar>
 
-  <router-outlet></router-outlet>
+    <mat-drawer-container (click)="sidenav.close()" [hasBackdrop]="'true'">
+    
+        <mat-drawer #sidenav [mode]="'over'" fxHide fxHide.sm="false" fxHide.xs="false">
+            <div class="sidenav-mobile" fxFlex="100%" fxLayout="column" fxLayoutAlign="start stretch">
+                <a (click)="sidenav.toggle()" routerLink="/pulse" mat-button routerLinkActive="active">Pulse</a>
+                <a (click)="sidenav.toggle()" routerLink="/the-wall" mat-button routerLinkActive="active">The Wall</a>
+                <a (click)="sidenav.toggle()" routerLink="/the-dark-side-of-the-moon" mat-button routerLinkActive="active">The Dark Side</a>
+            </div>
+            <button (click)="sidenav.toggle()" mat-icon-button aria-label="Ícono de configuración">
+                <mat-icon>clear</mat-icon>
+            </button>
+        </mat-drawer>
+        
+        <router-outlet></router-outlet>
+
+    </mat-drawer-container>
 
 </main>

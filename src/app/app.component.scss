@@ -1,0 +1,9 @@
+::ng-deep {
+    .logotipo {
+        margin-right: 10px;
+    }
+    .app-main, .mat-drawer-container {
+        height: calc(100% - 32px);
+    }  
+}
+ 

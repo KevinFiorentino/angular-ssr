@@ -1,1 +1,15 @@
-<p>dark-side works!</p>
+<div class="Dark-side" fxFlex="100%" fxLayout="row wrap" fxLayoutAlign="center start">
+
+    <div fxFlex.gt-sm="45%" fxFlex.gt-xs="100%" fxFlex="100%" fxLayout="column">
+        <app-cd-picture
+            [image]="'../../assets/images/dark-side.jpg'"
+        ></app-cd-picture>
+    </div>
+    <div fxFlex.gt-sm="45%" fxFlex.gt-xs="100%" fxFlex="100%" fxLayout="column">
+        <app-cd-content
+            [title]="'The Dark Side of the Moon'"
+            [content]="''"
+        ></app-cd-content>
+    </div>
+
+</div>

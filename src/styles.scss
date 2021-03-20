@@ -34,5 +34,18 @@ $dark-theme:   mat-dark-theme((
 
 /* Global Styles */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
