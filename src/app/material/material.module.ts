@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const MODULES = [
   FlexLayoutModule,
@@ -14,7 +15,8 @@ const MODULES = [
   MatIconModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatCardModule
+  MatCardModule,
+  MatSlideToggleModule
 ];
 
 @NgModule({
