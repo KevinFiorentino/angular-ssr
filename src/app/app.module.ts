@@ -19,7 +19,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
