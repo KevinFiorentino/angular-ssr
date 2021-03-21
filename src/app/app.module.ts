@@ -9,11 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
 
-/* *********************************** REDUX *********************************** */
-import { StoreModule as NgRxStoreModule } from '@ngrx/store';
-import { reducers, reducersInitialState } from './shared/redux/config-store-state.model';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -24,18 +19,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SharedModule,
-    NgRxStoreModule.forRoot(reducers, {
-      initialState: reducersInitialState,
-      runtimeChecks: {
-        strictStateImmutability: false,
-        strictActionImmutability: false
-      }
-    }),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: false
-    }),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
