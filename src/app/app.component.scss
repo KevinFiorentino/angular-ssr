@@ -1,9 +1,17 @@
 ::ng-deep {
     .logotipo {
         margin-right: 10px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }
     .app-main, .mat-drawer-container {
         height: calc(100% - 32px);
-    }  
+    }
+    .spacer-navbar {
+        flex: 1 1 auto;
+    }
 }
  
