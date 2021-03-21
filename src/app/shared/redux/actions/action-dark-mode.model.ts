@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
 
 export enum StoreStateTypes {
-  CHANGE_DARK_MODE = '[Buscador] Nueva búsqueda',
+  CHANGE_DARK_MODE = '[DarkMode] Change',
 }
 
 export class ChangeDarkModeAction implements Action {
