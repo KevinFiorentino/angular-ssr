@@ -1,0 +1,7 @@
+{
+    "name": "angular-ssr",
+    "description": "Prueba Angular Universal - NGRX - Docker",
+    "repository": "https://github.com/KevinFiorentino/angular-ssr",
+    "keywords": ["heroku", "angular", "ngrx", "docker"],
+    "stack": "container"
+}
