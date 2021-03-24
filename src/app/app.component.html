@@ -1,4 +1,4 @@
-<main class="app-main" [class]="darkMode ? 'dark-theme' : ''">
+<main class="app-main" [class]="(darkMode$ | async) ? 'dark-theme' : ''">
   
     <mat-toolbar>
         <span class="logotipo"><strong><a routerLink="/" mat-button>Pink Floyd</a></strong></span>

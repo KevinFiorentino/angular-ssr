@@ -11,7 +11,7 @@ import { SharedModule } from './shared/shared.module';
 
 /* *********************************** REDUX *********************************** */
 import { StoreModule as NgRxStoreModule } from '@ngrx/store';
-import { reducers, reducersInitialState } from './shared/redux/config-store-state.model';
+import { reducers/* , reducersInitialState */ } from './shared/redux/config-store-state.model';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -25,13 +25,14 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    NgRxStoreModule.forRoot(reducers, {
+/*     NgRxStoreModule.forRoot(reducers, {
       initialState: reducersInitialState,
       runtimeChecks: {
         strictStateImmutability: false,
         strictActionImmutability: false
       }
-    }),
+    }), */
+    NgRxStoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: false

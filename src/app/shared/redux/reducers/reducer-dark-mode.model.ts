@@ -1,9 +1,10 @@
+import { createReducer, on} from '@ngrx/store';
 import { StoreStateDarkMode, initStoreStateDarkMode } from '../store-state.model';
-import { StoreStateTypes, ChangeDarkModeAction } from '../actions/action-dark-mode.model';
+import * as DarkModeActions from '../actions/action-dark-mode.model';
 
-export type DarkModeActions = ChangeDarkModeAction;
+/* export type DarkModeActions = ChangeDarkModeAction; */
 
-export function reducerDarkMode(state: StoreStateDarkMode, action: DarkModeActions): StoreStateDarkMode {
+/* export function reducerDarkMode(state: StoreStateDarkMode, action: DarkModeActions): StoreStateDarkMode {
   switch (action.type) {
     case StoreStateTypes.CHANGE_DARK_MODE: {
       return {
@@ -15,4 +16,14 @@ export function reducerDarkMode(state: StoreStateDarkMode, action: DarkModeActio
       return state;
     }
   }
-}
+} */
+
+export const reducerDarkMode = createReducer(
+  initStoreStateDarkMode,
+  on(DarkModeActions.changeDarkModeAction, state => {
+    return {
+      ...state,
+      active: !state.active
+    };
+  })
+);

@@ -2,10 +2,6 @@ export interface StoreStateDarkMode {
   active: boolean;
 }
 
-export const initStoreStateDarkMode = () => {
-  return {
-    active: true
-  };
+export const initStoreStateDarkMode: StoreStateDarkMode = {
+  active: true
 };
-
-

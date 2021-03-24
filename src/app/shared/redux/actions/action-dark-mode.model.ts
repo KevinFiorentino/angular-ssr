@@ -1,10 +1,12 @@
-import { Action } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
-export enum StoreStateTypes {
+/* export enum StoreStateTypes {
   CHANGE_DARK_MODE = '[DarkMode] Change',
 }
 
 export class ChangeDarkModeAction implements Action {
-  type = StoreStateTypes.CHANGE_DARK_MODE;
+  readonly type = StoreStateTypes.CHANGE_DARK_MODE;
   constructor() { }
-}
+} */
+
+export const changeDarkModeAction = createAction('[DarkMode] Change');
