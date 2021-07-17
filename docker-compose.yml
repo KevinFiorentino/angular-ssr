@@ -5,3 +5,9 @@ services:
     image: angular-ssr
     ports:
       - '8080:4000'
+  nginx-proxy-ssr:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"

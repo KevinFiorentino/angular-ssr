@@ -14,4 +14,6 @@
 
 #### Docker
 
-- `docker-compose up -d`
+- `docker-compose up -d --build`
+- `localhost:4000` (Without proxy)
+- `localhost:80` (With proxy)
